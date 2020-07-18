@@ -1,0 +1,51 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<title>image map</title>
+</head>
+<body>
+	<header>
+	<div id="container">
+<h1 style="background-color: hsl(50,40%,60%); border: 2px solid black; text-align: center; padding: 10px">Image Map</h1>
+<div id="menu bar" align="center">
+	<nav>
+		<a href="computer.jpg">Computer</a> |
+		<a href="phone.jpg">Phone</a> |
+		<a href="coffee.jpg">Coffee</a>
+	</nav>
+</div>
+</header>
+<p>click on the computer, the phone,the cup of coffee to go to a new page and read more about the topic.</p>
+<img src="workplace.jpg" alt="workplace" usemap="#objectmap" width="400px" height="379">
+
+<map name="objectmap">
+	<area shape="rect" coords="34,44,270,350" alt="computer" href="computer.html" onclick="computerfunction()">
+	<!--rectanguler coordinates=left,top,left,bottom -->
+	<area shape="rect" coords="290,172,333,250" alt="phone" href="phone.html" onclick="phonefunction()">
+	<!--it can be default that define the entire region-->"
+	<area shape="circle" coords="337,300,44" alt="coffee" href="coffee.html" onclick="coffeefunction()">
+	<!--circular coordinates=x,y,r
+		r is for radius-->
+</map>
+	<script type="text/javascript">
+		function computerfunction()
+		{
+			alert("you clicked the computer!");
+		}
+		function phonefunction()
+		{
+			alert("you clicked the smartphone!");
+		}
+		function coffeefunction()
+		{
+			alert("you clicked the coffeecup!");
+		}
+	</script>
+</div>
+<footer>
+	
+</footer>
+</body>
+</html>
